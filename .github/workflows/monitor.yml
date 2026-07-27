@@ -30,4 +30,4 @@ jobs:
         run: pip install requests
       
       - name: Run monitor
-        run: python itmo-monit/monitor.py   # <--- ИЗМЕНЕНО: добавил путь к папке
+        run: python itmo-monit/itmo-monit/monitor.py
