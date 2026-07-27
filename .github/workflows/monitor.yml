@@ -30,4 +30,4 @@ jobs:
         run: pip install requests
       
       - name: Run monitor
-        run: python itmo-monit/itmo-monit/monitor.py
+        run: python monitor.py
