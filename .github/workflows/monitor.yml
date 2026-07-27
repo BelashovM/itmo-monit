@@ -2,7 +2,7 @@ name: ITMO Monitor
 
 on:
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: '*/6 * * * *'   # ← ВАЖНО! БЕЗ пробелов в начале строки
   workflow_dispatch:
 
 jobs:
