@@ -18,8 +18,16 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: Cache data file
+        uses: actions/cache@v4
+        with:
+          path: itmo_data.json
+          key: itmo-data-${{ github.run_id }}
+          restore-keys: |
+            itmo-data-
+      
       - name: Install dependencies
         run: pip install requests
       
       - name: Run monitor
-        run: python monitor.py
+        run: python itmo-monit/monitor.py   # <--- ИЗМЕНЕНО: добавил путь к папке
